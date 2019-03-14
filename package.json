@@ -1,0 +1,25 @@
+{
+  "name": "plac",
+  "version": "1.0.0",
+  "description": "Polish language ankicards creator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fluoxe7ine/plac.git"
+  },
+  "author": "fluoxe7ine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fluoxe7ine/plac/issues"
+  },
+  "homepage": "https://github.com/fluoxe7ine/plac#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "puppeteer": "^1.13.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  }
+}
