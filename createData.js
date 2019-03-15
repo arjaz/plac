@@ -13,10 +13,12 @@ async function createData(data) {
                 const examples = $('p.example span.say', html).text().split('.').join('. ').trim();
                 const img = $('img.pull-right', html).attr('src');
                 newWord.word = word;
-                if (translate) newWord.translate = translate;   
                 if (examples) newWord.examples = examples;
                 if (img) newWord.img = img;
-                resultArr.push(newWord);
+                if (translate) {
+                    newWord.translate = translate;   
+                    resultArr.push(newWord);
+                }; 
             })
             .catch(err => console.log(err));    
     }
