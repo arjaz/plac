@@ -5,7 +5,7 @@ function writeToFile(filename, data) {
     for (let word of data) {
         let line =  word.translate +
                     '<br>' +
-                    (!word.img ? '' : '<img src="' + word.img + '">') +
+                    (!word.img ? '' : '<img src="' + word.img + '">') + ';' +
                     word.word +
                     '<br><br>' +
                     (!word.examples ? '' : word.examples) + '\n';
