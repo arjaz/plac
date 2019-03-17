@@ -3,6 +3,7 @@ const $ = require('cheerio');
 
 async function createData(data) {
     let resultArr = [];
+    let errorArr = [];
 
     for (let word of data) {
         const url = encodeURI('http://slovar.e-polish.eu/ru/slovo/' +
@@ -24,11 +25,13 @@ async function createData(data) {
                 if (translate) {
                     newWord.translate = translate;
                     resultArr.push(newWord);
-                };
+                } else {
+                  errorArr.push(word);
+                }
             })
             .catch(err => console.log(err));
     }
-    return await resultArr;
+    return await { resultArr, errorArr };
 };
 
 module.exports = createData;

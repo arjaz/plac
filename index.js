@@ -10,4 +10,4 @@ const data = parseFile('dict.txt');
     let packedData = await createData(data);
     await writeToFile('result.csv', packedData);
 })();
-    
+
